@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Riikka's studies</title>
+</head>
+
+<body>
+  <h1> How much gasoline do I get?</h1>
+    <b>Description</b>
+    <section id='Description'>
+    Make a program that asks the price of the gasoline and amount of money from the user. The program calculates how much gasoline the user gets with the money. Result is printed to the user.
+    </section>
+    <b>Solution</b>
+    <section>
+      <form name='ask'>
+        Prize of the gasoline <input type='number' name='prize'><br />
+        The amount of money <input type='number' name='money'> <br />
+        <button type='button' onclick='myFunction()'>Calculate</button>
+      </form>
+      <p id='demo'></p>
+    </section>
+    <b>Code Example</b>
+    <section>
+    <pre class='code'>
+      function myFunction() {
+        var prize = Number(document.forms['ask']['prize'].value);
+        var money = Number(document.forms['ask']['money'].value);
+        var total = money/prize;
+        document.getElementById('demo').innerHTML = 'You are going to get '+total+' liters of gasoline.';
+      }
+    </pre>
+    </section>
+  <script>
+    function myFunction() {
+      var prize = Number(document.forms['ask']['prize'].value);
+      var money = Number(document.forms['ask']['money'].value);
+      var total = money/prize;
+      document.getElementById('demo').innerHTML = 'You are going to get '+total+' liters of gasoline.';
+    }
+  </script>
+</body>
+
+</html>

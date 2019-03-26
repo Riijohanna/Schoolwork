@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Loop assignements</title>
+</head>
+
+<body>
+  <h1>Tell me 20 numbers</h1>
+  <b>Description</b>
+  <section id='Description'>
+    Make a program that asks 20 numbers from user. After that the program prints out how many of those numbers where even.
+  </section>
+  <b>Solution</b>
+  <section>
+    Tell me the numbers (prompt) <br />
+    <button type='button' onclick="myFunction()">Start here</button>
+    <p id='demo'></p>
+  </section>
+  <b>Code Example</b>
+  <section>
+  <pre class='code'>
+    function myFunction() {
+      var evens = 0;
+      for (var i = 0; i < 20; i++) {
+        var number = Number(prompt('Tell me the numbers'));
+        if (number % 2 == 0) {
+          evens++; //evens=evens+1;
+        }
+      }
+      alert('Number of evens is ' +evens);
+    }
+  </pre>
+  </section>
+  <script>
+  function myFunction() {
+    var evens = 0;
+    for (var i = 0; i < 20; i++) {
+      var number = Number(prompt('Tell me the numbers'));
+      if (number % 2 == 0) {
+        evens++; //evens=evens+1;
+      }
+    }
+    alert('Number of evens is ' +evens);
+  }
+  </script>
+</body>
+
+</html>

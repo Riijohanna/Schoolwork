@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Riikka's studies</title>
+</head>
+
+<body>
+  <h1>What is your age?</h1>
+  <b>Description</b>
+  <section id='Description'>
+    Make a program that asks your age and salary and then gives you life coaching based the information.
+  </section>
+  <b>Solution</b>
+  <section>
+    <form name='ask'>
+      Your age <input type='number' name='age'><br />
+      Your salary <input type='number' name='salary'><br />
+      <button type='button' onclick='myFunction()'>Let me tell you something</button>
+    </form>
+  <p id='answer'></p>
+</section>
+<b>Code Example</b>
+<section class='nobg'>
+<textarea class='code'>
+  function myFunction(){
+    var age = Number(document.forms['ask']['age'].value);
+    var salary = Number(document.forms['ask']['salary'].value);
+    if (age < 65) {
+      if (salary <= 2000) {
+        document.getElementById('answer').innerHTML = 'Life goes on.';
+      } else {
+        document.getElementById('answer').innerHTML = 'Lucky you.';
+      }
+    } else {
+    document.getElementById('answer').innerHTML = 'Happy retirement!';
+  }}
+</textarea>
+</section>
+  <script>
+  function myFunction(){
+    var age = Number(document.forms['ask']['age'].value);
+    var salary = Number(document.forms['ask']['salary'].value);
+    if (age < 65) {
+      if (salary <= 2000) {
+        document.getElementById('answer').innerHTML = 'Life goes on.';
+      } else {
+        document.getElementById('answer').innerHTML = 'Lucky you.';
+      }
+    } else {
+    document.getElementById('answer').innerHTML = 'Happy retirement!';
+  }}
+  </script>
+</body>
+
+</html>

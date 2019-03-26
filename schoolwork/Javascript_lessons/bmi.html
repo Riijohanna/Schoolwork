@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title> How much is your BMI?</title>
+</head>
+<body>
+  <h1> How much is your BMI?</h1>
+  <b>Description</b>
+  <section id='Description'>
+  Make a program that calculates body mass index. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m2, resulting from mass in kilograms and height in metres.
+  </section>
+  <b>Solution</b>
+  <section>
+  <form name='ask'>
+    Body mass (kg) <input type='number' name='mass'><br>
+    Your height (m) <input type='number' name='height'>
+  </form>
+  <button type='button' onclick='myFunction()'>Calculate</button>
+  <p id='demo'></p>
+</section>
+<b>Code Example</b>
+<section>
+<pre class='code'>
+  function myFunction() {
+    var mass = Number(document.forms['ask']['mass'].value);
+    var height = Number(document.forms['ask']['height'].value);
+    var total = mass/(height*height);
+    document.getElementById('demo').innerHTML = 'Your body mass is '+total+'kg/m.';
+  }
+</pre>
+</section>
+  <script>
+    function myFunction() {
+      var mass = Number(document.forms['ask']['mass'].value);
+      var height = Number(document.forms['ask']['height'].value);
+      var total = mass/(height*height);
+      document.getElementById('demo').innerHTML = 'Your body mass is '+total+'kg/m.';
+    }
+  </script>
+</body>
+
+</html>

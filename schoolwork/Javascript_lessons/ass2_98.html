@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+ <title>Riikka's studies</title>
+</head>
+
+<body>
+  <h1>Numbers that are smaller than 100 and even</h1>
+    <b>Description</b>
+    <section id='Description'>
+      Make a program that prints all positive numbers that are smaller than 100 and even, in this order: 2 98 4 96 6 94
+    </section>
+    <b>Solution</b>
+    <section id='side1'>
+ <p id = "result"> </p>
+</section>
+<b>Code Example</b>
+<section>
+<pre class='code'>
+  var text = "";
+  number = 98;
+
+  for (var i = 2; i < 100; i=i+2) {
+    text += "" + i + "<br>";
+    text += "" + number +"<br>";
+    number-=2; //number=number-2;
+  }
+  document.getElementById("result").innerHTML = text;
+</pre>
+</section>
+ <script>
+
+   var text = "";
+   number = 98;
+
+   for (var i = 2; i < 100; i=i+2) {
+     text += "" + i + "<br>";
+     text += "" + number +"<br>";
+     number-=2; //number=number-2;
+   }
+   document.getElementById("result").innerHTML = text;
+ </script>
+</body>
+
+</html>

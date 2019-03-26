@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> What is your speed in km/h?</title>
+</head>
+
+<body>
+  <h1> What is your speed in km/h?</h1>
+  <form name='ask'>
+    Your distance (km) <input type='number' name='distance'><br>
+    The time used (h) <input type='number' name='time'>
+  </form>
+  <button type='button' onclick='mySpeed()'>Calculate</button>
+  <p id='demo'></p>
+  <script>
+    function mySpeed() {
+      var distance = Number(document.forms['ask']['distance'].value);
+      var time = Number(document.forms['ask']['time'].value);
+      var total = distance/time;
+      document.getElementById('demo').innerHTML = 'Your average speed was '+total+' kilometres an hour.';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <title>Piano</title>
+  <style>
+    body {
+      background-color: rgb(245, 231, 239);
+      font-size: 0;
+      margin-top: 30px;
+    }
+    /* #container {  this makes it kind of centered.....
+  margin: 0 auto;
+  width: 600px;
+  padding: 0;
+  } */
+
+  #piano {
+  text-align: center;
+  width: 100%;
+  }
+/* background-image: repeating-linear-gradient(to left bottom, black, darkgrey 10%, grey 7%); */
+
+  #keyboard {
+  font-size: 0;
+  background-image: repeating-linear-gradient(to left bottom, black, rgb(22, 20, 22) 2px);
+  padding: 5px;
+  border-radius: 20px;
+  width: 80%;
+  padding-top: 10px;
+  box-shadow: 1px 3px 5px black;
+  margin-top: 30px;
+  }
+  #keyspanel{
+    background-color: rgb(20, 19, 18);
+    box-shadow: inset 0px 0px 5px darkgrey;
+    margin: 10px 95px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+#panel {
+display: flex;
+  background-color: rgb(20, 19, 18);
+  box-shadow: inset 0px 0px 5px darkgrey;
+  margin: 10px 105px;
+  padding: 3px;
+  border-radius: 10px;
+}
+  #panelon {
+
+    background-image: linear-gradient(to left bottom, #211b20, #3f213a, #602354, #841f6e, #aa0a87);
+    width: 65%;
+    height: 70px;
+    margin: 10px;
+    margin-left: 30px;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 5px darkgrey;
+    color: white;
+  }
+/* textarea {
+  background: none;
+  border: none;
+  color: white;
+  size: 30px;
+  text-align: center;
+  height: 50px;
+  width: 150px;
+  padding-top: 20px;
+  padding-right: 150px;
+}
+
+.textarea:focus {
+  outline:none;
+}
+.textarea:hover {
+  outline:none;
+} */
+  #butt {
+margin-left: 6.9px;
+margin-top: 6.9px;
+    background-color: black;
+    height: 27px;
+    width: 27px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 3px white;
+
+  }
+#butt1 {
+margin-left: 105px;
+margin-top: 25px;
+  background-color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 3px white;
+
+}
+
+  #butt:active {
+    box-shadow: 0px 2px rgb(24, 23, 24);
+  }
+    /* makes the buttons click (bottom) when pressed/active:
+    box-shadow: inset (=inside the box) 0px  0px 5px green is a classic set*/
+    div .black:active {
+      box-shadow: 0px 2px rgb(185, 183, 186);
+    }
+    div .white:active {
+      box-shadow: 0px 1px rgb(185, 183, 186);
+    }
+    .white {
+      display: inline-block;
+      background-color: white;
+      height: 150px;
+      width: 20px;
+      padding: 80px 20px;
+      border: 1.5px solid black;
+      border-right: none;
+      position: relative;
+      z-index: 1;
+      vertical-align: top;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    #last {
+      border-right: 1.5px solid black;
+    }
+
+    .black {
+      display: inline-block;
+      background-color: black;
+      height: 80px;
+      Width: 20px;
+      padding: 50px 15px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    #container {
+      display: block;
+    }
+    .black_placeholder {
+    width: 0px;
+    position: relative;
+    vertical-align: top;
+    z-index: 2;
+    height: 50px;
+    left: -25px;
+    display: inline-block;
+}
+#butt i {
+  margin-top: 8px;
+  color: rgb(203, 212, 205);
+  font-size: 10px;
+}
+pre {
+  color: rgb(203, 212, 205);
+  font-size: 23px;
+  font-style: italic;
+  font-family: sans-serif;
+  text-align: left;
+}
+  </style>
+</head>
+
+<body>
+  <div id='container'>
+    <div id="piano">
+          <div id="keyboard"><div id='panel'><div id='panelon'>
+             <pre onclick='powerOn()'>
+            Welcome to play!</pre>
+          </div><div id='butt1'><div id='butt' onclick='powerOn()'><i class="fas fa-power-off"></i></div></div>
+            </div>
+            <div id='keyspanel'>
+            <div class="A white"></div>
+            <div class="black_placeholder">
+              <div class="As black"></div>
+            </div>
+            <div class="B white"></div>
+            <div class="C white"></div>
+            <div class="black_placeholder">
+              <div class="Cs black"></div>
+            </div>
+            <div class="D white"></div>
+            <div class="black_placeholder">
+              <div class="Ds black"></div>
+            </div>
+            <div class="E white"></div>
+            <div class="F white"></div>
+            <div class="black_placeholder">
+              <div class="Fs black"></div>
+            </div>
+            <div class="G white"></div>
+            <div class="black_placeholder">
+              <div class="Gs black"></div>
+            </div>
+            <div class="A2 white"></div>
+            <div class="black_placeholder">
+              <div class="As2 black"></div>
+            </div>
+            <div class="B2 white" id='last'></div>
+          </div>
+        </div>
+  </div>
+  <div id='currentnote'>
+    <div id='keysounds'>
+      <audio id='sounds-A' src='sounds\A.ogg'></audio>
+      <audio id='sounds-As' src='sounds\As.ogg'></audio>
+      <audio id='sounds-B' src='sounds\B.ogg'></audio>
+      <audio id='sounds-C' src='sounds\C.ogg'></audio>
+      <audio id='sounds-Cs' src='sounds\Cs.ogg'></audio>
+      <audio id='sounds-D' src='sounds\D.ogg'></audio>
+      <audio id='sounds-Ds' src='sounds\Ds.ogg'></audio>
+      <audio id='sounds-E' src='sounds\E.ogg'></audio>
+      <audio id='sounds-F' src='sounds\F.ogg'></audio>
+      <audio id='sounds-Fs' src='sounds\Fs.ogg'></audio>
+      <audio id='sounds-G' src='sounds\G.ogg'></audio>
+      <audio id='sounds-Gs' src='sounds\Gs.ogg'></audio>
+      <audio id='sounds-A2' src='sounds\A2.ogg'></audio>
+      <audio id='sounds-As2' src='sounds\As2.ogg'></audio>
+      <audio id='sounds-B2' src='sounds\B2.ogg'></audio>
+</div>
+</div>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>

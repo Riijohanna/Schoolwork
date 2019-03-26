@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Array assignements</title>
+</head>
+
+<body>
+  <h1>Arrays</h1>
+  <b>Description</b>
+  <section id='Description'>
+    Make a program that lists numbers and prints out the numbers as follows. Program also swaps third and seventh number (6 and 7) other way around.
+  </section>
+  <b>Solution</b>
+  <section id='side2'>
+    Show me the numbers (in prompt and a list) <br />
+    <button type='button' onclick="myFunction()">Start here</button>
+    <p id='demo2'></p>
+    <p id='demo'></p>
+  </section>
+  <b>Code Example</b>
+  <section class='nobg'>
+  <textarea class='code'>
+    function myFunction() {
+      var numbers = [4, -5, -2, 7, 15, -9, 0, 6, 7, 2];
+      alert('The numbers are '+numbers[2]+', '+numbers[4]+' and '+numbers[1]);
+      alert('There are '+numbers.length+' numbers in all');
+      alert(numbers);
+      var text2 = '<ol>';
+        for(var i=0; i<numbers.length; i++){
+          text2 += '<li> number '+numbers[i]+'</li>';
+        }
+        text2 +='</ol>';
+      document.getElementById('demo2').innerHTML = text2;
+      var extra = numbers[3];
+      numbers[3] = numbers[7];
+      numbers[7] = extra;
+      var text = '<ol>';
+        for(var i=0; i<numbers.length; i++){
+          text += '<li> number '+numbers[i]+'</li>';
+        }
+        text +='</ol>';
+      document.getElementById('demo').innerHTML = text;
+    } </br>
+  </textarea>
+  </section>
+  <script>
+  function myFunction() {
+    var numbers = [4, -5, -2, 7, 15, -9, 0, 6, 7, 2];
+    alert('The numbers are '+numbers[2]+', '+numbers[4]+' and '+numbers[1]);
+    alert('There are '+numbers.length+' numbers in all');
+    alert(numbers);
+    var text2 = '<ol>';
+      for(var i=0; i<numbers.length; i++){
+        text2 += '<li> number '+numbers[i]+'</li>';
+      }
+      text2 +='</ol>';
+    document.getElementById('demo2').innerHTML = text2;
+    var extra = numbers[3];
+    numbers[3] = numbers[7];
+    numbers[7] = extra;
+    var text = '<ol>';
+      for(var i=0; i<numbers.length; i++){
+        text += '<li> number '+numbers[i]+'</li>';
+      }
+      text +='</ol>';
+    document.getElementById('demo').innerHTML = text;
+  }
+  // Benitas sum function HERE and average as the same... avg = sum/numbers.length;
+  </script>
+</body>
+
+</html>

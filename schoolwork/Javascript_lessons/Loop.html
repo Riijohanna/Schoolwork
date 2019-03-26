@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> For Loop </title>
+</head>
+
+<body>
+  <p id='result'></p>
+  <p id='result2'></p>
+  <script>
+    var text = '';
+    var text2 = '';
+    for (var i = 0; i < 5; i++) {    //i++ is the same as i = i+1
+      text += 'The number is ' +i+ '<br>';
+    }
+    document.getElementById('result').innerHTML = text;
+
+    for (var i = 100; i >= 50; i--){
+      text2 += 'The number is ' +i+ '<br>';
+    }
+      document.getElementById('result2').innerHTML = text2;
+  </script>
+</body>
+
+
+</html>

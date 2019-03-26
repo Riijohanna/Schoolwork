@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Second Javascript</title>
+</head>
+
+<body>
+  <h1> Web page</h1>
+  <p> Give one number:</p>
+  <form name='ask'>
+    <input type='number' min='1' max='10' name='number1'>
+    <input type='number' min='1' max='10' name='number2'>
+  </form>
+  <button type='button' onclick="myFunction()">Try it</button>
+  <p id='demo'></p>
+  <script>
+    function myFunction() {
+      var num = Number(document.forms['ask']['number1'].value);
+      var num2 = Number(document.forms['ask']['number2'].value);
+      var myNum = num + 1;
+      document.getElementById('demo').innerHTML = 'Your number is ' + num + '. My number is ' + myNum + '. I win!';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html> //Anastasiias code (function is right)
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Loop assignments 7</title>
+</head>
+
+<body>
+  <h1>Loop7</h1>
+  Make a program that ask first one number from the user. After that the program asks: ”Do you want to continue giving numbers?(y/n)”. If user answers y, the program continues to ask another number. If user answers n, program ends. In the end program prints out average of the numbers.
+  <button type='button' onclick="myFunction()">Start here</button>
+  <script>
+  function myFunction() {
+    var sum = 0;
+    var cnt = 0;
+    var reply = true;
+    while (reply) {
+      sum += Number(window.prompt("Enter a number"));
+      cnt++;
+      reply = confirm("Do you want to continue?");
+    }
+    alert(sum / cnt);
+  }
+  </script>
+</body>
+
+</html>

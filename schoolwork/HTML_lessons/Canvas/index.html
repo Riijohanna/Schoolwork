@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Riikka's studies</title>
+</head>
+<body>
+  <h1> Canvas lesson</h1>
+    <b>Description</b>
+    <section id='Description'>
+    How to draw your first Canvas? Make it look like a foggy day.
+    </section>
+    <b>Solution</b>
+    <section>
+    <!-- <canvas id='myCanvas' height="200" width="200"></canvas> -->
+    <canvas id='myCanvas2' height="200" width="400"></canvas>
+    </section>
+    <b>Code Example</b>
+    <section>
+    <pre class='code'>
+      var cc = document.getElementById('myCanvas2');
+      var ctx = cc.getContext('2d');
+
+      ctx.shadowBlur = 20;
+      ctx.shadowColor = "black";
+
+      var grd = ctx.createLinearGradient(0, 250, 0, 0);
+      grd.addColorStop(0, "rgb(156, 170, 180)");
+      grd.addColorStop(1, "lightblue");
+      ctx.fillStyle = grd;
+      ctx.fillRect(0, 0, 400, 150);
+
+      etc.
+    </pre>
+    </section>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

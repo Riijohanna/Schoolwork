@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Loop for</title>
+</head>
+
+<body>
+  <h1>Loop5</h1>
+  <script>
+    var num;
+    var average;
+    var sum = 0;
+    var total = 0;
+    do {
+      num = Number(prompt('Give a number'));
+      if (num == 0) {
+        break;
+      }
+      sum = sum + num; //same as sum+=num
+      total++;
+    } while (true);
+    average=sum/total;
+
+    console.log('The average of the numbers is '+ average);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> If statement</title>
+</head>
+
+<body>
+  <h1>How if statements work</h1>
+  <p id='answer'></p>
+  <script>
+    var age = 18;
+    var text = ''; //the text comes here, like what ever cos its empty....
+    if(age <= 17){
+      text = 'You are too young.';
+    }else if(age >= 65){
+    text = 'You are too old.'
+    }else{
+      text = 'You are adult.';
+    }
+    text += ' Here is end!';
+    document.getElementById('answer').innerHTML = text;
+  </script>
+</body>
+
+</html>

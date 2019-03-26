@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> If statement</title>
+</head>
+
+<body>
+  <h1>Give me three numbers</h1>
+  <form name='ask'>
+    Your numbers <input type='number' name='nthree'>
+  </form>
+  <button type='button' onclick='myFunction()'>Send</button>
+  <p id='answer'></p>
+  <script> //Perry is sending the right code to the slack! This is not right....
+    function myFunction(){
+        var one = Number(document.forms['ask']['none'].value);
+        var two = Number(document.forms['ask']['ntwo'].value);
+        var three = Number(document.forms['ask']['nthree'].value);
+        var text = '';
+        var total = var tree + var two + var one
+        if(one >= 0 && two >= 0 && three >= 0){
+          total = 'The sum is (one+two+three).';
+        }
+        //this can be first if and the upper one inside that if..? Anastasias code
+        else if(one >= 0 || two >= 0 || three >= 0) {
+          total = '';
+        }
+        else {
+          text = 'Only negatives.';
+        }
+        document.getElementById('answer').innerHTML = text;
+      }
+      //read also the conditioning ass. number 3 and 4 results!!
+  </script>
+</body>
+
+</html>

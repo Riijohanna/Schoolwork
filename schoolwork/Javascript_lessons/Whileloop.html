@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>While loop</title>
+</head>
+
+<body>
+  <p id='result'></p>
+  <p id='result2'></p>
+  <script>
+    var text = '';
+    var i =0;
+    while(i<5){
+      text += 'The number is '+i+'<br>';
+      i++;
+    }
+    document.getElementById('result').innerHTML = text;
+    //asking the user:
+    var answer = 'yes';
+    var text2 ='';
+    var i =0;
+    while(answer === 'yes'){
+      console.log('the number is '+i);
+      i++;
+      answer = prompt('You want to see more?(yes/no)');
+    }
+  </script>
+</body>
+
+</html>

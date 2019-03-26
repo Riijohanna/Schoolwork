@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: lightgrey;
+  margin: 0;
+  height: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+section {
+  background-color: rgb(251, 247, 251);
+  height: 210px;
+  width: 800px;
+  margin: 0.5em;
+  border-radius: 0.5em;
+  flex: 3;
+  padding: 1.5em;
+}
+#Description {
+  height: 50px;
+}
+.nobg {
+  background: none;
+}
+
+.code {
+  height: 250px;
+  font-size: 14px;
+  text-shadow: #FC0 1px 0 10px;
+}
+textarea {
+  width: 800px;
+  height: 80px;
+  border: none;
+}
+h1 {
+  padding: 0.8em;
+  font-style: oblique;
+  font-size: 24px;
+}
+#myCanvas {
+  border: 3px solid black;
+  border-color: black;
+  border-radius: 20px;
+}
+#myCanvas2 {
+  border: 3px solid black;
+  border-color: black;
+  border-radius: 20px;
+}

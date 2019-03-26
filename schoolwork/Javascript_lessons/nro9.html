@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Loop assignements 9</title>
+</head>
+
+<body>
+  <h1>Two biggest numbers</h1>
+  <b>Description</b>
+  <section id='Description'>
+    Make a program that asks ten numbers and in the end prints out two biggest numbers.
+  </section>
+  <b>Solution</b>
+  <section>
+    Tell me the numbers (prompt) <br />
+    <button type='button' onclick="myFunction()">Start here</button>
+    <p id='demo'></p>
+  </section>
+  <b>Code Example</b>
+  <section class='nobg'>
+  <textarea class='code'>
+    function myFunction() {
+      var big;
+      var secbig;
+      var number;
+
+        big = Number(prompt('Give a number.'));
+        secbig = Number(prompt('Give a number.'));
+        if(secbig>big) {
+          var extra = big; //its safe there and stays when the secbig arrives....
+          big = secbig;
+          secbig = extra; //so that big would be the biggest not the other way around
+        }
+        for(var i=0; i<=10-2; i++){
+        number = Number(prompt('Give a number.'));
+          if(number>big){
+            secbig = big;
+            big = number;
+          } else if(number>secbig) {
+            secbig = number;
+          }
+        }
+      alert('The biggest number that you gave was ' +big+' and the second biggest is '+secbig);
+    }
+  </textarea>
+  </section>
+  <script>
+  function myFunction() {
+    var big;
+    var secbig;
+    var number;
+
+      big = Number(prompt('Give a number.'));
+      secbig = Number(prompt('Give a number.'));
+      if(secbig>big) {
+        var extra = big; //its safe there and stays when the secbig arrives....
+        big = secbig;
+        secbig = extra; //so that big would be the biggest not the other way around
+      }
+      for(var i=0; i<=10-2; i++){
+      number = Number(prompt('Give a number.'));
+        if(number>big){
+          secbig = big;
+          big = number;
+        } else if(number>secbig) {
+          secbig = number;
+        }
+      }
+    alert('The biggest number that you gave was ' +big+' and the second biggest is '+secbig);
+  }
+  </script>
+</body>
+
+</html>

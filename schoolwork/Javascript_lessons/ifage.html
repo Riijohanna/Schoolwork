@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title> If statement</title>
+</head>
+
+<body>
+  <h1>Want to join military?</h1>
+  <b>Description</b>
+  <section id='Description'>
+  Make a program that asks age of the user. If the age is less than 18 the text “too young” is printed. If the age is less than 27 the text “Right age for military service” is printed. If the age is less than 41 the text “You are in reserve” is printed. If the age is less than 55 the text “You are in backup reserve” is printed. All other cases “too aged” is printed.
+</section>
+<b>Solution</b>
+<section>
+  <form name='ask'>
+    Your age <input type='number' name='age'>
+  </form>
+  <button type='button' onclick='myFunction()'>Send</button>
+  <p id='answer'></p>
+</section>
+<b>Code Example</b>
+<section class='nobg'>
+<textarea class='code'>
+  function myFunction(){
+      var age = Number(document.forms['ask']['age'].value);
+      var text = '';
+      if(age < 18){
+        text = 'You are too young.';
+      }
+      else if(age < 27) {
+        text = 'Right age for military.';
+      }
+      else if(age < 41) {
+        text = 'You are in reserve.';
+      }
+      else if(age < 55) {
+        text = 'You are in backup reserve.';
+      }else {
+        text = 'Too aged.';
+      }
+      document.getElementById('answer').innerHTML = text;
+    }
+</textarea>
+</section>
+  <script>
+    function myFunction(){
+        var age = Number(document.forms['ask']['age'].value);
+        var text = '';
+        if(age < 18){
+          text = 'You are too young.';
+        }
+        else if(age < 27) {
+          text = 'Right age for military.';
+        }
+        else if(age < 41) {
+          text = 'You are in reserve.';
+        }
+        else if(age < 55) {
+          text = 'You are in backup reserve.';
+        }else {
+          text = 'Too aged.';
+        }
+        document.getElementById('answer').innerHTML = text;
+      }
+  </script>
+</body>
+
+</html>

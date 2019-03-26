@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Riikka's studies</title>
+</head>
+
+<body>
+  <h1> Transitions</h1>
+    <b>Description</b>
+    <section id='Description'>
+    Make a circle which gets bigger and changes color while you hover. Turn it around also.
+    </section>
+    <b>Solution</b>
+    <section>
+      <figure class="circle"><input type='text' name='te' value='Touch me!'> </input></figure>
+    </section>
+    <b>CSS Example</b>
+    <section>
+    <pre class='code'>
+      .circle {
+        background: radial-gradient(circle at 100px 100px, #de5cff, #000);
+        -webkit-transition: width 1s, height 1s, -webkit-transform 3s;
+        transition: width 1s, height 1s, transform 3s;
+      }
+      .circle:hover {
+        -webkit-transform: rotate(180deg); /* Safari */
+        transform: rotate(180deg);
+        background: radial-gradient(circle at 100px 100px, rgb(205, 200, 66), #000);
+      }
+    </pre>
+    </section>
+</body>
+
+</html>

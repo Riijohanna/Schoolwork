@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Loop assignements 8</title>
+</head>
+
+<body>
+  <h1>Tell me how many numbers you want</h1>
+  <b>Description</b>
+  <section id='Description'>
+    Make a program that asks first how many numbers user wants to give to the program. After that program asks those numbers. In the end program prints out the smallest number that user gave.
+  </section>
+  <b>Solution</b>
+  <section>
+    Tell me the numbers (prompt) <br />
+    <button type='button' onclick="myFunction()">Start here</button>
+    <p id='demo'></p>
+  </section>
+  <b>Code Example</b>
+  <section class='nobg'>
+  <textarea class='code'>
+    function myFunction() {
+      var times;
+      var small;
+      var number;
+
+        times = Number(prompt('Tell me how many numbers you want'));
+        small = Number(prompt('Give a number.'));
+        for(var i=0; i < times-1; i++){
+        number = Number(prompt('Give a number.'));
+          if(number < small){
+            small = number;
+          }
+        }
+      alert('The smallest number that you gave was ' +small);
+    }
+  </textarea>
+  </section>
+  <script>
+  function myFunction() {
+    var times;
+    var small;
+    var number;
+
+      times = Number(prompt('Tell me how many numbers you want'));
+      small = Number(prompt('Give a number.'));
+      for(var i=0; i<times-1; i++){
+      number = Number(prompt('Give a number.'));
+        if(number<small){
+          small = number;
+        }
+      }
+    alert('The smallest number that you gave was ' +small);
+  }
+  </script>
+</body>
+
+</html>

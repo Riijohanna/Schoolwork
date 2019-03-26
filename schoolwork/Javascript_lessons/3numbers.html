@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Riikka's studies</title>
+</head>
+<body>
+	<h1>What is your number?</h1>
+	<b>Description</b>
+	<section id='Description'>
+	Make a program that asks three numbers from the user. Program prints out sum of the numbers, if any of the numbers is positive. If all the numbers are positive, also print out multiplication. If all numbers are negative, text “only negatives” is printed. Handle zero as positive in this assignment.
+</section>
+<b>Solution</b>
+<section>
+		<form name="ask">
+		Your number<input type="number" name="number1"><br>
+		Your number<input type="number" name="number2"><br>
+		Your number<input type="number" name="number3">
+	</form>
+	<button type="button" onclick= "myfunction()">Submit</button>
+	<p id ="id1"></p>
+</section>
+<b>Code Example</b>
+<section class='nobg'>
+<textarea class='code'>
+	function myfunction(){
+		var number1=Number(document.forms["ask"]["number1"].value);
+		var number2=Number(document.forms["ask"]["number2"].value);
+		var number3=Number(document.forms["ask"]["number3"].value);
+		var result;
+		if (number1 >= 0 && number2 >=0 && number3 >=0){
+			var x = number1 + number2 + number3;
+			var y = number1 * number2 * number3;
+			result = "Sum"+ " " +x+ " and multiple" + " " +y;
+		}else if (number1 >= 0 || number2 >=0 || number3 >=0){
+			var x = number1 + number2 + number3;
+			result = "sum "+ x;
+		}else {
+			result = "only negative"
+		}
+		document.getElementById("id1").innerHTML = result;
+}
+</textarea>
+</section>
+	<script>
+	function myfunction(){
+		var number1=Number(document.forms["ask"]["number1"].value);
+		var number2=Number(document.forms["ask"]["number2"].value);
+		var number3=Number(document.forms["ask"]["number3"].value);
+		var result;
+		if (number1 >= 0 && number2 >=0 && number3 >=0){
+			var x = number1 + number2 + number3;
+			var y = number1 * number2 * number3;
+			result = "Sum"+ " " +x+ " and multiple" + " " +y;
+		}else if (number1 >= 0 || number2 >=0 || number3 >=0){
+			var x = number1 + number2 + number3;
+			result = "sum "+ x;
+		}else {
+			result = "only negative"
+		}
+		document.getElementById("id1").innerHTML = result;
+}
+</script>
+</body>
+</html>
