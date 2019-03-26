@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Riikka's study diary</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/logo.png" alt="">
+      </div>
+      <nav>
+        <ul class='topnav' id='TopNav'>
+          <li><a href="cv.html">About Me</a></li>
+          <li><a href='Index.html'>JS Lessons</a></li>
+          <li><a href="Indexhtml.html">HTML Lessons</a></li>
+        </ul>
+      </nav>
+    </header>
+      <main>
+          <nav class='sidenav'>
+            <ul>
+              <li onclick="function()" class="dropdown-btn">
+                <a href="frame_grid_numbers.html" target="iframe_a">Basic mathematics<i class="fas fa-angle-down"></i></a></li>
+                  <ul>
+                  <li><a href='\Javascript_lessons\gasoline.html' target="iframe_a">JS 1.1</a></li>
+                  <li><a href='\Javascript_lessons\bmi.html' target="iframe_a">JS 1.2</a></li>
+                  <li><a href='\Javascript_lessons\inch.html' target="iframe_a">JS 1.3</a></li>
+                </ul>
+              <li onclick="function()" class="dropdown-btn">
+                <a href="frame_grid_numbers.html" target="iframe_a">Conditions<i class="fas fa-angle-down"></i></a></li>
+                  <ul>
+                  <li><a href="\Javascript_lessons\ifage.html" target="iframe_a">JS 2.1</a></li>
+                  <li><a href="\Javascript_lessons\3numbers.html" target="iframe_a">JS 2.2</a></li>
+                  <li><a href="\Javascript_lessons\ifstate2.html" target="iframe_a">JS 2.3</a></li>
+                </ul>
+              <li onclick="function()" class="dropdown-btn">
+                <a href="frame_grid_numbers.html" target="iframe_a">Loops<i class="fas fa-angle-down"></i></a></li>
+                <ul>
+                <li><a href="\Javascript_lessons\dropdown.html"  target="iframe_a">JS 3.1</a></li>
+                <li><a href="\Javascript_lessons\20nrs.html" target="iframe_a">JS 3.2</a></li>
+                <li><a href="\Javascript_lessons\ass2_98.html" target="iframe_a">JS 3.3</a></li>
+                <li><a href="\Javascript_lessons\nro8.html" target="iframe_a">JS 3.4</a></li>
+                <li><a href="\Javascript_lessons\nro9.html" target="iframe_a">JS 3.5</a></li>
+                <li><a href='\Javascript_lessons\array1a.html' target="iframe_a">JS 3.6</a></li>
+              </ul>
+              <li><a href='indexVentti.html' target="iframe_a">Ventti -the game</a></li>
+            </ul>
+          </nav>
+        <iframe src='' name="iframe_a"></iframe>
+    </main>
+    <footer>
+      <div class="footer">
+        Copyright @ Riikka H.
+      </div>
+    </footer>
+    <script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "block";
+  }
+});
+}
+    </script>
+  </body>
+</html>

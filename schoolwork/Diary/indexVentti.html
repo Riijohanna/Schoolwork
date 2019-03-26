@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>UniCorn Hello world</title>
+
+  <title>Ventti -the Game</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styleVentti.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://en.clubpoker.net/medias/images/superadmin/articles/zoom/4-color-playing-cards-586987.jpg" alt="">
+    </div>
+    <h1>Ventti -the game</h1>
+  </header>
+
+  <main>
+
+    <!-- <form id="theform" method="" action="" novalidate="novalidate">
+      <button id="start new game" type="button" onclick="hideOnClk(this.id)">Start</button>
+      <button id="newgame" type="button" class="hide" onclick="hideOnClk(this.id)">New Game</button>
+    </form> -->
+
+    <div id="hostnumbers">
+      <h2>Host</h2>
+      <div id="host">
+
+      </div>
+      Sum of the cards:
+      <div id="sumhost">
+
+      </div>
+    </div>
+    <div class="buttons">
+      <button onclick="startAgain()" type="button">Restart</button>
+      <button onclick="playCard()" type="button" title="third">Deal</button>
+            <button onclick="userStopsTaking()" type="button" title="second">No deal</button>
+    </div>
+
+    <div id="playernumbers">
+      <h2>Player</h2>
+      <div id="player">
+
+      </div>
+      Sum of the cards:
+      <div id="sumplayer">
+
+      </div>
+    </div>
+
+    <div id="winner"></div>
+  </main>
+  <footer>
+    <h6>
+      Group work: Anastasiia, Sujata and Riikka
+    </h6>
+  </footer>
+
+
+  <!-- <script>
+    function hideOnClk(id) {
+      if (id == "start") {
+        document.getElementById("newgame").style.display = "block";
+        document.getElementById(id).style.display = "none";
+      } else {
+        document.getElementById("start").style.display = "block";
+        document.getElementById(id).style.display = "none";
+      }
+    }
+
+    window.onscroll = function() {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrolltop > 40 || document.documentElement.scrollTop > 40) {
+        document.getElementById("topBtn").style.display = "block";
+      } else {
+        document.getElementById("topBtn").style.display = "none";
+      }
+    }
+  </script> -->
+  <script src="scriptVentti.js"></script>
+</body>
+
+</html>

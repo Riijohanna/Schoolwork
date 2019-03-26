@@ -1,0 +1,114 @@
+* {
+  margin: 0
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(245, 231, 239);
+}
+
+header {
+  background-color: rgb(233, 208, 223);
+  height: 160px;
+  width: 100%;
+  text-align: center;
+}
+
+div {
+  height: 30px;
+}
+
+h1 {
+  color: black;
+  text-decoration: underline;
+  margin-top: 85px;
+}
+
+h2 {
+  padding: 20px;
+}
+
+button {
+  display: block;
+  color: #331534;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 30px;
+  border-radius: 15px;
+  width: 8em;
+  height: 3em;
+}
+
+button:focus {
+  outline: none;
+}
+
+#host, #player {
+  min-height: 8em;
+  display:flex;
+}
+
+#winner {
+  margin-left: 5em;
+  font-size: 2em;
+}
+
+#newgame {
+  display: none;
+}
+
+img {
+  width: 35%;
+  height: 160px;
+  margin-right: 20px;
+}
+
+main {
+  margin: 100px 100px 100px 190px;
+  text-align: center;
+  display: flex;
+
+}
+
+form {
+  display: block;
+  align-items: center;
+}
+
+#playernumbers {
+  display: block;
+  background-color: lightgrey;
+  height: 250px;
+  width: 150px;
+  padding: 50px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#hostnumbers {
+  display: block;
+  background-color: lightgrey;
+  padding: 50px;
+  height: 250px;
+  width: 150px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+footer {
+  background-color: rgb(233, 208, 223);
+  text-align: center;
+  height: 50px;
+  width: auto;
+  padding: 20px;
+}
+
+.card {
+  padding: 0.8em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  display: inline-block;
+  margin: 0.5em;
+  item-align: center;
+}

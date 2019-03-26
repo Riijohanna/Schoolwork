@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: lightgrey;
+}
+
+/* --------HEADER AREA-------- */
+.topnav {
+  margin: 0 auto;
+  height: 30px;
+  background-color: rgb(101, 78, 103);
+  text-align: center;
+  padding: 1.5em;
+}
+.topnav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.topnav a:hover{
+  }
+  /* if you want to have the line allthetime...
+  border-bottom: 1px solid white; */
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+  width: 130px;
+  text-align: center;
+}
+.topnav a:after {
+  content:'';
+  height: 1px;
+  width: 0%;
+  display: block;
+  background-color: white;
+  transition: 1.3s ease all;
+}
+/* these goes from 0 Width to 100 , you have to have Content for pseudoelements and they are inline by default so they have to be Blocked...*/
+
+.topnav li:hover a:after {
+  content:'';
+  height: 1px;
+  width: 100%;
+  background-color: white;
+}
+.logo {
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+}
+
+.logo img {
+  height: 80px;
+  width: 80px;
+}
+
+/* --------MAIN AREA-------- */
+main {
+  height: 800px;
+  display: flex;
+  flex: 1;
+}
+.sidenav {
+  height: 800px;
+  background-color: rgb(101, 78, 103);
+  padding: 1.5em;
+}
+.sidenav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.3em;
+}
+.sidenav a:hover {
+  border-left: 1px solid white;
+}
+.sidenav li {
+  display: block;
+  background-color:rgb(110, 83, 113);
+  border: none;
+  border-radius: 0.4em;
+  font-size: 16px;
+  color: white;
+  padding: 0.5em;
+  margin: 0.8em;
+}
+ul ul {
+  display: none;
+}
+ul ul.responsive li {
+  display: block;
+}
+i {
+  padding: 0.5em;
+}
+iframe {
+  width: 82%;
+}
+iframe:focus {
+  outline: none;
+}
+
+iframe[seamless] {
+  display: block;
+}
+ /* -------FOOTER AREA-------- */
+footer {
+  background-color: rgb(101, 78, 103);
+  text-align: center;
+  height: 30px;
+  padding: 10px;
+  color: white;
+
+}

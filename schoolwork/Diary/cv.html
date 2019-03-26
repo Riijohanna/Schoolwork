@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Riikka's CV</title>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" type="text/css" href="CVstyle.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="">
+    </div>
+
+    <nav>
+      <ul class='topnav' id='mobTopNav'>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="cv.html"> CV</a></li>
+        <li><a href="#"> Contact</a></li>
+        <a onclick='topnavFunction()' href='#' class='icon'><i class="fa fa-bars"></i></a>
+      </ul>
+    </nav>
+  </header>
+  <main id="container2">
+  <nav id='cvnav'>
+    <ul>
+      <li id=li1><a href="#edu"><i class="fas fa-graduation-cap"></i><br>Education</a></li>
+      <li id=li2><a href="#work"><i class="fas fa-pencil-alt"></i><br>Work</a></li>
+      <li id=li3><a href="#dev"><i class="fas fa-mobile-alt"></i><br>Developer Skills</a></li>
+      <li id=li4><a href="#pers"><i class="fas fa-female"></i><br>Personal Skills</a></li>
+      <li id=li5><a href="#lang"><i class="fas fa-globe-americas"></i><br>Languages</a></li>
+      <li id=li6><a href="#hobb"><i class="fas fa-camera"></i><br>Hobbies</a></li>
+    </ul>
+  </nav>
+        <section id='edu'>
+          <h2>Education </h2>
+          <p>
+            Something something something
+          </p>
+        </section>
+        <section id='work'>
+          <h2>Work </h2>
+        </section>
+        <section id='dev'>
+          <h2>Developer Skills </h2>
+        </section>
+        <section id='pers'>
+          <h2>Personal Skills </h2>
+        </section>
+        <section id='lang'>
+          <h2>Languages </h2>
+        </section>
+        <section id='hobb'>
+          <h2>Hobbies </h2>
+        </section>
+  </main>
+  <footer>
+    <div class='footerlinks'>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Cv</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div> <div>
+
+      <form>
+        <h3>Join with our newsletter</h3><br>
+      <div>
+      <label for='first'>First name </label>
+      <input id='first' type='text'> </div>
+      <div><label for='last'>Last name </label>
+      <input id='last' type='text'></div>
+      <div><label for='email'>Email </label>
+      <input id='email' type='email'></div>
+      <div><label for='phone'>Phone number </label>
+      <input id='phone' type='tel'></div>
+      <br>
+      <button type='button' onclick='myFunction()'>Join with our newsletter</button>
+    </form>
+    </div>
+  </footer>
+  <button type="button" onclick="backtotopFunction()" id="topBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+<script>
+window.onscroll = function () {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
+  document.getElementById('topBtn').style.display = 'block';
+  }
+  else {
+    document.getElementById('topBtn').style.display = 'none';
+  }
+}
+//this makes it go to top
+function backtotopFunction(){
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
+//this makes navigation visible with the hamburger button
+function topnavFunction() {
+  var x = document.getElementById('mobTopNav');
+  if (x.className == 'topnav') {
+    x.className += ' responsive';
+  } else {
+    x.className = 'topnav';
+  }
+}</script>
+</body>
+
+</html>
