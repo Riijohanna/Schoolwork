@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='colors.json'></script>
+    <title>Changing colors</title>
+    <style>
+      body {
+        font-size: 20px;
+        margin-top: 300px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      input {
+        font-size: 20px;
+        font-family: sans-serif;
+        border-radius: 20px;
+        padding: 20px;
+        margin-top: 30px;
+        box-shadow: inset 0px 0px 5px darkgrey;
+      }
+      input:focus {
+        outline:none;
+      }
+
+      </style>
+  </head>
+  <body>
+    Change the colour of the background:<br />
+    <input type="button" value="Try" onclick="myColor()" />
+    <p id="demo"></p>
+<script>
+
+// for (let i = 0; i < data.length; i++) {
+//   console.log(data[i].name);
+// }
+
+function myColor(){
+  let randomItem = data[Math.floor(Math.random()*data.length)];
+  document.getElementById("demo").innerHTML = 'Background color is '+ randomItem.name;
+  document.body.style.backgroundColor = randomItem.hex;
+}
+
+
+
+
+//   $.getJSON('colors.json', function myColor(){
+//     let myObj = 'data';
+//     var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+//   for(let i = 0; i < data.length; i++) {
+// document.getElementById("demo").innerHTML += 'Background color is: '+ myObj.name;
+// }
+// }
+// myColor();
+
+</script>
+  </body>
+</html>
